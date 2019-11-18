@@ -36,8 +36,8 @@ public abstract class VisualTestBase {
 		driver = new ChromeDriver();
 		initiateEyes();
 		
-		//driver.get("https://demo.applitools.com/hackathon.html?showAd=true");
-		driver.get("https://demo.applitools.com/hackathonV2.html?showAd=true");
+		driver.get("https://demo.applitools.com/hackathon.html?showAd=true");
+		//driver.get("https://demo.applitools.com/hackathonV2.html?showAd=true");
 			
 	}
 	
@@ -50,17 +50,8 @@ public abstract class VisualTestBase {
 	private static void initiateEyes() {
 		runner = new ClassicRunner();
 		eyes = new Eyes(runner);
-		System.out.println(System.getProperty("applitools.api.key"));
 		eyes.setApiKey(System.getProperty("applitools.api.key"));
 	}
 	
-//	public void validateWindow() {
-//		batch = new BatchInfo("Login");
-//		batch.setId("login123");
-//		eyes.setBatch(batch); 
-//		eyes.open(driver, "Hackathon", Thread.currentThread().getStackTrace()[2].getMethodName());
-//		eyes.checkWindow();
-//		eyes.close();
-//	}
 
 }
